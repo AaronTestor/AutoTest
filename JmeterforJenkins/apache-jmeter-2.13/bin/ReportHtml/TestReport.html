@@ -1,0 +1,507 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=GBK">
+<title>Interface Test Results</title>
+<style type="text/css">
+				body {
+					font:normal 68% verdana,arial,helvetica;
+					color:#000000;
+				}
+				table tr td, table tr th {
+					font-size: 68%;
+				}
+				table.details tr th{
+				    color: #ffffff;
+					font-weight: bold;
+					text-align:center;
+					background:#2674a6;
+					white-space: nowrap;
+				}
+				table.details tr td{
+					background:#eeeee0;
+					white-space: normal;
+					text-align: center;
+				}
+				h1 {
+					margin: 0px 0px 5px;
+					font: 165% verdana,arial,helvetica;
+					font-weight: bolder;
+					text-align: center;
+				}
+				h2 {
+					margin-top: 1em;
+					margin-bottom: 0.5em; 
+					font: bold 125% verdana,arial,helvetica
+				}
+				h3 {
+					margin-bottom: 0.5em; 
+					font: bold 115% verdana,arial,helvetica
+				}
+				.Failure {
+					font-weight:bold; color:red;
+				}
+				.LongTime {
+					font-weight:bold; color:#ff9900;
+				}
+				
+	
+				img
+				{
+				  border-width: 0px;
+				}
+				
+				.expand_link
+				{
+				   position=absolute;
+				   right: 0px;
+				   width: 27px;
+				   top: 1px;
+				   height: 27px;
+				}
+				
+				.page_details
+				{
+				   display: none;
+				}
+                                
+                .page_details_expanded
+                {
+                    display: block;
+                    display/* hide this definition from  IE5/6 */: table-row;
+                }
+
+
+			</style>
+<script type="text/JavaScript">
+				
+	                function expand(details_id)
+				   	{
+				      
+				    	document.getElementById(details_id).className = "page_details_expanded";
+				   	};
+				   
+				   	function collapse(details_id)
+				   	{
+				      
+				      	document.getElementById(details_id).className = "page_details";
+				   	};
+				   	 var patch_timestamp = function() {
+                    var spans = document.getElementsByTagName("span");
+                    var len = spans.length;
+                    for( var i = 0; i < len; ++i ) {
+                        var span = spans[i];
+                        if( "patch_timestamp" == span.className )
+                            span.innerHTML = new Date( parseInt( span.innerHTML ) );
+                    }
+                   };
+				  
+				   	function change(details_id)
+				   	{
+				      	if(document.getElementById(details_id+"_image").src.match("expand"))
+				      	{
+				         	document.getElementById(details_id+"_image").src = "collapse.png";
+				         	expand(details_id);
+				      	}
+				      	else
+				      	{
+				        	document.getElementById(details_id+"_image").src = "expand.png";
+				         	collapse(details_id);
+				      	} 
+	                }
+				
+			</script>
+</head>
+<body>
+<h1>Interface Test Results</h1>
+<table width="100%">
+<tr>
+<td align="left">Date report: 2017-03-09 23:40:52</td><td align="center">Host: </td><td align="right">Report: <a href="../../../Jmeter/apache-jmeter-2.13/ReportHtml/TestReport_test.html">Detail Result</a></td>
+</tr>
+</table>
+<hr size="1">
+<h2>Summary</h2>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th># Samples</th><th>Success</th><th>Failures</th><th>Success Rate</th><th>Average Time</th><th>Min Time</th><th>Max Time</th><th>90% Line</th><th>TPS</th>
+</tr>
+<tr valign="top" class="Failure">
+<td align="center">54</td><td align="center">27</td><td style="font-weight:bold" align="center"><font color="red">27</font></td><td align="center">50.00%</td><td align="center">32 ms</td><td align="center">0 ms</td><td align="center">147 ms</td><td align="center">105 ms</td><td align="center">31 ms</td>
+</tr>
+</table>
+<hr align="center" width="95%" size="1">
+<h2>Pages</h2>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th>URL</th><th># Samples</th><th>Success</th><th>Failures</th><th>Success Rate</th><th>Average Time</th><th>Min Time</th><th>Max Time</th><th>90% Line</th><th>TPS</th><th></th>
+</tr>
+<tr valign="top">
+<td align="center">request baidu one</td><td align="center">9</td><td align="center">9</td><td align="center">0</td><td align="center">100.00%</td><td align="center">117 ms</td><td align="center">97 ms</td><td align="center">147 ms</td><td align="center">135 ms</td><td align="center">9 ms</td><td align="center"><a href="javascript:change('page_details_1')"><img alt="expand/collapse" src="expand.png" id="page_details_1_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_1">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "request baidu one"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td align="center">线程组 1-1</td><td align="center">1</td><td align="center">128</td><td align="center">8697</td><td align="center">true</td>
+</tr>
+<tr>
+<td align="center">线程组 1-1</td><td align="center">2</td><td align="center">105</td><td align="center">8697</td><td align="center">true</td>
+</tr>
+<tr>
+<td align="center">线程组 1-1</td><td align="center">3</td><td align="center">147</td><td align="center">8696</td><td align="center">true</td>
+</tr>
+<tr>
+<td align="center">线程组 1-1</td><td align="center">4</td><td align="center">97</td><td align="center">8696</td><td align="center">true</td>
+</tr>
+<tr>
+<td align="center">线程组 1-1</td><td align="center">5</td><td align="center">108</td><td align="center">8696</td><td align="center">true</td>
+</tr>
+<tr>
+<td align="center">线程组 1-1</td><td align="center">6</td><td align="center">121</td><td align="center">2781</td><td align="center">true</td>
+</tr>
+<tr>
+<td align="center">线程组 1-1</td><td align="center">7</td><td align="center">135</td><td align="center">2781</td><td align="center">true</td>
+</tr>
+<tr>
+<td align="center">线程组 1-1</td><td align="center">8</td><td align="center">109</td><td align="center">8696</td><td align="center">true</td>
+</tr>
+<tr>
+<td align="center">线程组 1-1</td><td align="center">9</td><td align="center">102</td><td align="center">8696</td><td align="center">true</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="Failure">
+<td align="center"><a href="#request baidu two">request baidu two</a></td><td align="center">9</td><td align="center">7</td><td align="center">2</td><td align="center">77.78%</td><td align="center">29 ms</td><td align="center">0 ms</td><td align="center">50 ms</td><td align="center">50 ms</td><td align="center">34 ms</td><td align="center"><a href="javascript:change('page_details_2')"><img alt="expand/collapse" src="expand.png" id="page_details_2_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_2">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "request baidu two"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td align="center">线程组 1-1</td><td align="center">1</td><td align="center">50</td><td align="center">2781</td><td align="center">true</td>
+</tr>
+<tr>
+<td align="center">线程组 1-1</td><td align="center">2</td><td align="center">29</td><td align="center">8697</td><td align="center">true</td>
+</tr>
+<tr>
+<td align="center">线程组 1-1</td><td align="center">3</td><td align="center">28</td><td align="center">8696</td><td align="center">true</td>
+</tr>
+<tr>
+<td align="center">线程组 1-1</td><td align="center">4</td><td align="center">27</td><td align="center">8696</td><td align="center">true</td>
+</tr>
+<tr>
+<td align="center">线程组 1-1</td><td align="center">5</td><td align="center">30</td><td align="center">8696</td><td align="center">true</td>
+</tr>
+<tr>
+<td align="center">线程组 1-1</td><td align="center">6</td><td align="center">1</td><td align="center">2090</td><td align="center">false</td>
+</tr>
+<tr>
+<td align="center">线程组 1-1</td><td align="center">7</td><td align="center">0</td><td align="center">2090</td><td align="center">false</td>
+</tr>
+<tr>
+<td align="center">线程组 1-1</td><td align="center">8</td><td align="center">50</td><td align="center">2781</td><td align="center">true</td>
+</tr>
+<tr>
+<td align="center">线程组 1-1</td><td align="center">9</td><td align="center">50</td><td align="center">2781</td><td align="center">true</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="Failure">
+<td align="center"><a href="#request baidu three">request baidu three</a></td><td align="center">9</td><td align="center">6</td><td align="center">3</td><td align="center">66.67%</td><td align="center">29 ms</td><td align="center">1 ms</td><td align="center">53 ms</td><td align="center">51 ms</td><td align="center">35 ms</td><td align="center"><a href="javascript:change('page_details_3')"><img alt="expand/collapse" src="expand.png" id="page_details_3_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_3">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "request baidu three"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td align="center">线程组 1-1</td><td align="center">1</td><td align="center">1</td><td align="center">2090</td><td align="center">false</td>
+</tr>
+<tr>
+<td align="center">线程组 1-1</td><td align="center">2</td><td align="center">48</td><td align="center">2781</td><td align="center">true</td>
+</tr>
+<tr>
+<td align="center">线程组 1-1</td><td align="center">3</td><td align="center">28</td><td align="center">8696</td><td align="center">true</td>
+</tr>
+<tr>
+<td align="center">线程组 1-1</td><td align="center">4</td><td align="center">28</td><td align="center">8696</td><td align="center">true</td>
+</tr>
+<tr>
+<td align="center">线程组 1-1</td><td align="center">5</td><td align="center">53</td><td align="center">2781</td><td align="center">true</td>
+</tr>
+<tr>
+<td align="center">线程组 1-1</td><td align="center">6</td><td align="center">49</td><td align="center">2781</td><td align="center">true</td>
+</tr>
+<tr>
+<td align="center">线程组 1-1</td><td align="center">7</td><td align="center">51</td><td align="center">2781</td><td align="center">true</td>
+</tr>
+<tr>
+<td align="center">线程组 1-1</td><td align="center">8</td><td align="center">1</td><td align="center">2090</td><td align="center">false</td>
+</tr>
+<tr>
+<td align="center">线程组 1-1</td><td align="center">9</td><td align="center">1</td><td align="center">2090</td><td align="center">false</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="Failure">
+<td align="center"><a href="#request baidu four">request baidu four</a></td><td align="center">9</td><td align="center">5</td><td align="center">4</td><td align="center">55.56%</td><td align="center">16 ms</td><td align="center">1 ms</td><td align="center">29 ms</td><td align="center">29 ms</td><td align="center">63 ms</td><td align="center"><a href="javascript:change('page_details_4')"><img alt="expand/collapse" src="expand.png" id="page_details_4_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_4">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "request baidu four"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td align="center">线程组 1-1</td><td align="center">1</td><td align="center">29</td><td align="center">8697</td><td align="center">true</td>
+</tr>
+<tr>
+<td align="center">线程组 1-1</td><td align="center">2</td><td align="center">1</td><td align="center">2090</td><td align="center">false</td>
+</tr>
+<tr>
+<td align="center">线程组 1-1</td><td align="center">3</td><td align="center">27</td><td align="center">8696</td><td align="center">true</td>
+</tr>
+<tr>
+<td align="center">线程组 1-1</td><td align="center">4</td><td align="center">29</td><td align="center">8696</td><td align="center">true</td>
+</tr>
+<tr>
+<td align="center">线程组 1-1</td><td align="center">5</td><td align="center">1</td><td align="center">2090</td><td align="center">false</td>
+</tr>
+<tr>
+<td align="center">线程组 1-1</td><td align="center">6</td><td align="center">1</td><td align="center">2090</td><td align="center">false</td>
+</tr>
+<tr>
+<td align="center">线程组 1-1</td><td align="center">7</td><td align="center">1</td><td align="center">2090</td><td align="center">false</td>
+</tr>
+<tr>
+<td align="center">线程组 1-1</td><td align="center">8</td><td align="center">28</td><td align="center">8696</td><td align="center">true</td>
+</tr>
+<tr>
+<td align="center">线程组 1-1</td><td align="center">9</td><td align="center">25</td><td align="center">8696</td><td align="center">true</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="Failure">
+<td align="center"><a href="#request baidu five">request baidu five</a></td><td align="center">9</td><td align="center">0</td><td align="center">9</td><td align="center">0.00%</td><td align="center">0 ms</td><td align="center">0 ms</td><td align="center">1 ms</td><td align="center">1 ms</td><td align="center">4500 ms</td><td align="center"><a href="javascript:change('page_details_5')"><img alt="expand/collapse" src="expand.png" id="page_details_5_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_5">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "request baidu five"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td align="center">线程组 1-1</td><td align="center">1</td><td align="center">0</td><td align="center">958</td><td align="center">false</td>
+</tr>
+<tr>
+<td align="center">线程组 1-1</td><td align="center">2</td><td align="center">0</td><td align="center">958</td><td align="center">false</td>
+</tr>
+<tr>
+<td align="center">线程组 1-1</td><td align="center">3</td><td align="center">0</td><td align="center">958</td><td align="center">false</td>
+</tr>
+<tr>
+<td align="center">线程组 1-1</td><td align="center">4</td><td align="center">0</td><td align="center">958</td><td align="center">false</td>
+</tr>
+<tr>
+<td align="center">线程组 1-1</td><td align="center">5</td><td align="center">0</td><td align="center">958</td><td align="center">false</td>
+</tr>
+<tr>
+<td align="center">线程组 1-1</td><td align="center">6</td><td align="center">0</td><td align="center">958</td><td align="center">false</td>
+</tr>
+<tr>
+<td align="center">线程组 1-1</td><td align="center">7</td><td align="center">1</td><td align="center">958</td><td align="center">false</td>
+</tr>
+<tr>
+<td align="center">线程组 1-1</td><td align="center">8</td><td align="center">0</td><td align="center">958</td><td align="center">false</td>
+</tr>
+<tr>
+<td align="center">线程组 1-1</td><td align="center">9</td><td align="center">1</td><td align="center">958</td><td align="center">false</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr valign="top" class="Failure">
+<td align="center"><a href="#request baidu six">request baidu six</a></td><td align="center">9</td><td align="center">0</td><td align="center">9</td><td align="center">0.00%</td><td align="center">0 ms</td><td align="center">0 ms</td><td align="center">0 ms</td><td align="center">0 ms</td><td align="center">Infinity ms</td><td align="center"><a href="javascript:change('page_details_6')"><img alt="expand/collapse" src="expand.png" id="page_details_6_image"></a></td>
+</tr>
+<tr class="page_details" id="page_details_6">
+<td bgcolor="#FF0000" colspan="8">
+<div align="center">
+<b>Details for Page "request baidu six"</b>
+<table width="95%" cellspacing="1" cellpadding="1" border="0" bgcolor="#2674A6" bordercolor="#000000">
+<tr>
+<th>Thread</th><th>Iteration</th><th>Time (milliseconds)</th><th>Bytes</th><th>Success</th>
+</tr>
+<tr>
+<td align="center">线程组 1-1</td><td align="center">1</td><td align="center">0</td><td align="center">958</td><td align="center">false</td>
+</tr>
+<tr>
+<td align="center">线程组 1-1</td><td align="center">2</td><td align="center">0</td><td align="center">958</td><td align="center">false</td>
+</tr>
+<tr>
+<td align="center">线程组 1-1</td><td align="center">3</td><td align="center">0</td><td align="center">958</td><td align="center">false</td>
+</tr>
+<tr>
+<td align="center">线程组 1-1</td><td align="center">4</td><td align="center">0</td><td align="center">958</td><td align="center">false</td>
+</tr>
+<tr>
+<td align="center">线程组 1-1</td><td align="center">5</td><td align="center">0</td><td align="center">958</td><td align="center">false</td>
+</tr>
+<tr>
+<td align="center">线程组 1-1</td><td align="center">6</td><td align="center">0</td><td align="center">958</td><td align="center">false</td>
+</tr>
+<tr>
+<td align="center">线程组 1-1</td><td align="center">7</td><td align="center">0</td><td align="center">958</td><td align="center">false</td>
+</tr>
+<tr>
+<td align="center">线程组 1-1</td><td align="center">8</td><td align="center">0</td><td align="center">958</td><td align="center">false</td>
+</tr>
+<tr>
+<td align="center">线程组 1-1</td><td align="center">9</td><td align="center">0</td><td align="center">958</td><td align="center">false</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+<hr align="center" width="95%" size="1">
+<h2>Failure Detail</h2>
+<table width="95%" cellspacing="2" cellpadding="5" border="0" class="details" align="center">
+<tr valign="top">
+<th align="left">URL</th><th align="left">Status</th><th align="center">Datetime</th><th align="center">Failure Message</th><th align="right">Response Data</th>
+</tr>
+<tr>
+<td>request baidu two</td><td>false</td><td class="data"><span class="patch_timestamp">1483622713321</span></td><td>Request Failed</td><td width="30%" style="word-wrap:break-word;">Non HTTP response code: org.apache.http.NoHttpResponseException - Non HTTP response message: The target server failed to respond<br>
+</td>
+</tr>
+<tr>
+<td>request baidu two</td><td>false</td><td class="data"><span class="patch_timestamp">1483622766428</span></td><td>Request Failed</td><td width="30%" style="word-wrap:break-word;">Non HTTP response code: org.apache.http.NoHttpResponseException - Non HTTP response message: The target server failed to respond<br>
+</td>
+</tr>
+<tr>
+<td>request baidu three</td><td>false</td><td class="data"><span class="patch_timestamp">1482843975930</span></td><td>Request Failed</td><td width="30%" style="word-wrap:break-word;">Non HTTP response code: org.apache.http.NoHttpResponseException - Non HTTP response message: The target server failed to respond<br>
+</td>
+</tr>
+<tr>
+<td>request baidu three</td><td>false</td><td class="data"><span class="patch_timestamp">1483622794549</span></td><td>Request Failed</td><td width="30%" style="word-wrap:break-word;">Non HTTP response code: org.apache.http.NoHttpResponseException - Non HTTP response message: The target server failed to respond<br>
+</td>
+</tr>
+<tr>
+<td>request baidu three</td><td>false</td><td class="data"><span class="patch_timestamp">1483622954283</span></td><td>Request Failed</td><td width="30%" style="word-wrap:break-word;">Non HTTP response code: org.apache.http.NoHttpResponseException - Non HTTP response message: The target server failed to respond<br>
+</td>
+</tr>
+<tr>
+<td>request baidu four</td><td>false</td><td class="data"><span class="patch_timestamp">1482843997708</span></td><td>Request Failed</td><td width="30%" style="word-wrap:break-word;">Non HTTP response code: org.apache.http.NoHttpResponseException - Non HTTP response message: The target server failed to respond<br>
+</td>
+</tr>
+<tr>
+<td>request baidu four</td><td>false</td><td class="data"><span class="patch_timestamp">1483622634332</span></td><td>Request Failed</td><td width="30%" style="word-wrap:break-word;">Non HTTP response code: org.apache.http.NoHttpResponseException - Non HTTP response message: The target server failed to respond<br>
+</td>
+</tr>
+<tr>
+<td>request baidu four</td><td>false</td><td class="data"><span class="patch_timestamp">1483622713376</span></td><td>Request Failed</td><td width="30%" style="word-wrap:break-word;">Non HTTP response code: org.apache.http.NoHttpResponseException - Non HTTP response message: The target server failed to respond<br>
+</td>
+</tr>
+<tr>
+<td>request baidu four</td><td>false</td><td class="data"><span class="patch_timestamp">1483622766487</span></td><td>Request Failed</td><td width="30%" style="word-wrap:break-word;">Non HTTP response code: org.apache.http.NoHttpResponseException - Non HTTP response message: The target server failed to respond<br>
+</td>
+</tr>
+<tr>
+<td>request baidu five</td><td>false</td><td class="data"><span class="patch_timestamp">1482843975970</span></td><td>Request Failed</td><td width="30%" style="word-wrap:break-word;">Non HTTP response code: org.apache.http.client.ClientProtocolException - Non HTTP response message: URI does not specify a valid host name: http:/www.baidu.com/<br>
+</td>
+</tr>
+<tr>
+<td>request baidu five</td><td>false</td><td class="data"><span class="patch_timestamp">1482843997718</span></td><td>Request Failed</td><td width="30%" style="word-wrap:break-word;">Non HTTP response code: org.apache.http.client.ClientProtocolException - Non HTTP response message: URI does not specify a valid host name: http:/www.baidu.com/<br>
+</td>
+</tr>
+<tr>
+<td>request baidu five</td><td>false</td><td class="data"><span class="patch_timestamp">1483622499033</span></td><td>Request Failed</td><td width="30%" style="word-wrap:break-word;">Non HTTP response code: org.apache.http.client.ClientProtocolException - Non HTTP response message: URI does not specify a valid host name: http:/www.baidu.com/<br>
+</td>
+</tr>
+<tr>
+<td>request baidu five</td><td>false</td><td class="data"><span class="patch_timestamp">1483622562952</span></td><td>Request Failed</td><td width="30%" style="word-wrap:break-word;">Non HTTP response code: org.apache.http.client.ClientProtocolException - Non HTTP response message: URI does not specify a valid host name: http:/www.baidu.com/<br>
+</td>
+</tr>
+<tr>
+<td>request baidu five</td><td>false</td><td class="data"><span class="patch_timestamp">1483622634350</span></td><td>Request Failed</td><td width="30%" style="word-wrap:break-word;">Non HTTP response code: org.apache.http.client.ClientProtocolException - Non HTTP response message: URI does not specify a valid host name: http:/www.baidu.com/<br>
+</td>
+</tr>
+<tr>
+<td>request baidu five</td><td>false</td><td class="data"><span class="patch_timestamp">1483622713400</span></td><td>Request Failed</td><td width="30%" style="word-wrap:break-word;">Non HTTP response code: org.apache.http.client.ClientProtocolException - Non HTTP response message: URI does not specify a valid host name: http:/www.baidu.com/<br>
+</td>
+</tr>
+<tr>
+<td>request baidu five</td><td>false</td><td class="data"><span class="patch_timestamp">1483622766501</span></td><td>Request Failed</td><td width="30%" style="word-wrap:break-word;">Non HTTP response code: org.apache.http.client.ClientProtocolException - Non HTTP response message: URI does not specify a valid host name: http:/www.baidu.com/<br>
+</td>
+</tr>
+<tr>
+<td>request baidu five</td><td>false</td><td class="data"><span class="patch_timestamp">1483622794590</span></td><td>Request Failed</td><td width="30%" style="word-wrap:break-word;">Non HTTP response code: org.apache.http.client.ClientProtocolException - Non HTTP response message: URI does not specify a valid host name: http:/www.baidu.com/<br>
+</td>
+</tr>
+<tr>
+<td>request baidu five</td><td>false</td><td class="data"><span class="patch_timestamp">1483622954318</span></td><td>Request Failed</td><td width="30%" style="word-wrap:break-word;">Non HTTP response code: org.apache.http.client.ClientProtocolException - Non HTTP response message: URI does not specify a valid host name: http:/www.baidu.com/<br>
+</td>
+</tr>
+<tr>
+<td>request baidu six</td><td>false</td><td class="data"><span class="patch_timestamp">1482843975971</span></td><td>Request Failed</td><td width="30%" style="word-wrap:break-word;">Non HTTP response code: org.apache.http.client.ClientProtocolException - Non HTTP response message: URI does not specify a valid host name: http:/www.baidu.com/<br>
+</td>
+</tr>
+<tr>
+<td>request baidu six</td><td>false</td><td class="data"><span class="patch_timestamp">1482843997719</span></td><td>Request Failed</td><td width="30%" style="word-wrap:break-word;">Non HTTP response code: org.apache.http.client.ClientProtocolException - Non HTTP response message: URI does not specify a valid host name: http:/www.baidu.com/<br>
+</td>
+</tr>
+<tr>
+<td>request baidu six</td><td>false</td><td class="data"><span class="patch_timestamp">1483622499035</span></td><td>Request Failed</td><td width="30%" style="word-wrap:break-word;">Non HTTP response code: org.apache.http.client.ClientProtocolException - Non HTTP response message: URI does not specify a valid host name: http:/www.baidu.com/<br>
+</td>
+</tr>
+<tr>
+<td>request baidu six</td><td>false</td><td class="data"><span class="patch_timestamp">1483622562954</span></td><td>Request Failed</td><td width="30%" style="word-wrap:break-word;">Non HTTP response code: org.apache.http.client.ClientProtocolException - Non HTTP response message: URI does not specify a valid host name: http:/www.baidu.com/<br>
+</td>
+</tr>
+<tr>
+<td>request baidu six</td><td>false</td><td class="data"><span class="patch_timestamp">1483622634352</span></td><td>Request Failed</td><td width="30%" style="word-wrap:break-word;">Non HTTP response code: org.apache.http.client.ClientProtocolException - Non HTTP response message: URI does not specify a valid host name: http:/www.baidu.com/<br>
+</td>
+</tr>
+<tr>
+<td>request baidu six</td><td>false</td><td class="data"><span class="patch_timestamp">1483622713401</span></td><td>Request Failed</td><td width="30%" style="word-wrap:break-word;">Non HTTP response code: org.apache.http.client.ClientProtocolException - Non HTTP response message: URI does not specify a valid host name: http:/www.baidu.com/<br>
+</td>
+</tr>
+<tr>
+<td>request baidu six</td><td>false</td><td class="data"><span class="patch_timestamp">1483622766504</span></td><td>Request Failed</td><td width="30%" style="word-wrap:break-word;">Non HTTP response code: org.apache.http.client.ClientProtocolException - Non HTTP response message: URI does not specify a valid host name: http:/www.baidu.com/<br>
+</td>
+</tr>
+<tr>
+<td>request baidu six</td><td>false</td><td class="data"><span class="patch_timestamp">1483622794591</span></td><td>Request Failed</td><td width="30%" style="word-wrap:break-word;">Non HTTP response code: org.apache.http.client.ClientProtocolException - Non HTTP response message: URI does not specify a valid host name: http:/www.baidu.com/<br>
+</td>
+</tr>
+<tr>
+<td>request baidu six</td><td>false</td><td class="data"><span class="patch_timestamp">1483622954320</span></td><td>Request Failed</td><td width="30%" style="word-wrap:break-word;">Non HTTP response code: org.apache.http.client.ClientProtocolException - Non HTTP response message: URI does not specify a valid host name: http:/www.baidu.com/<br>
+</td>
+</tr>
+</table>
+</body>
+</html>
